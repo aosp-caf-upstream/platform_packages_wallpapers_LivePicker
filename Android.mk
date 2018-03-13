@@ -42,6 +42,7 @@ LOCAL_SRC_FILES := $(call all-subdir-java-files)
 LOCAL_REQUIRED_MODULES := android.software.live_wallpaper.xml
 
 LOCAL_PACKAGE_NAME := LiveWallpapersPicker
+LOCAL_PRIVATE_PLATFORM_APIS := true
 LOCAL_CERTIFICATE := platform
 
 LOCAL_PROGUARD_FLAG_FILES := proguard.flags
@@ -55,7 +56,7 @@ LOCAL_STATIC_ANDROID_LIBRARIES := \
     android-support-core-utils \
     android-support-core-ui \
     android-support-fragment \
-    android-support-design \
+    $(ANDROID_SUPPORT_DESIGN_TARGETS) \
     android-support-transition \
     android-support-v7-recyclerview
 
